@@ -214,6 +214,13 @@ return [
         'category'              => 'categoria',
         'blood_type'            => 'tipo sanguíneo',
         'birth_date'            => 'data de nascimento',
+
+        'client.phone_one'     => 'celular',
+        'client.phone_two'     => 'celular 2',
+        'client.document'      => 'documento',
+        'client.document_type' => 'tipo do documento',
+        'address.zip_code'     => 'cep',
+        'address.landmark'     => 'ponto de referência',
     ],
 
 ];
