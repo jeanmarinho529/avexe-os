@@ -11,14 +11,19 @@ class Client extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'address_id',
         'name',
         'document',
         'document_type',
         'birth_date',
         'email',
-        'phone',
-        'client_type',
+        'phone_one',
+        'phone_two',
         'notes',
-        'address_id',
     ];
+
+    public function address()
+    {
+        return $this->hasOne(Address::class, 'id', 'address_id');
+    }
 }

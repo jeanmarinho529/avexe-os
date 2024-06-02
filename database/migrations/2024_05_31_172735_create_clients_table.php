@@ -12,14 +12,15 @@ return new class () extends Migration {
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('address_id')->constrained();
             $table->string('name');
             $table->string('document', 14);
             $table->enum('document_type', ['cpf', 'cnpj']);
             $table->date('birth_date');
             $table->string('email')->nullable();
-            $table->string('phone', 11);
+            $table->string('phone_one', 11);
+            $table->string('phone_two', 11)->nullable();
             $table->text('notes')->nullable();
-            $table->foreignId('address_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
 
