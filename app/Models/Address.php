@@ -12,6 +12,7 @@ class Address extends Model
 
     protected $fillable = [
         'address',
+        'number',
         'neighborhood',
         'city',
         'state',
